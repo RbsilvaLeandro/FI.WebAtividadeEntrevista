@@ -31,14 +31,14 @@
                 function (r) {
                     ModalDialog("Sucesso!", r)
                     $("#formCadastroBeneficiario")[0].reset();
-                    RedirectAction('GET',urlRetorno);
+                    Redirect('GET',urlRetorno);
                 }
         });
     })  
 })
 
 
-function RedirectAction(Method, url) {
+function Redirect(Method, url) {
 
     $.ajax({
         type: Method,
