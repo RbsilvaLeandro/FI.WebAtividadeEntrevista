@@ -1,0 +1,38 @@
+﻿@model WebAtividadeEntrevista.Models.ClienteModel
+@{
+    ViewBag.Title = "Alterar Cliente";
+}
+@section scripts{
+    <script>
+        var urlPost = '@Url.Action("Alterar", "Cliente", new { area = "" })';
+        var urlAlt = '@Url.Action("Incluir", "Cliente", new { id = Model.Id })';
+        var urlRetorno = '@Url.Action("Index", "Cliente", new { area = "" })';
+        var urlListBeneficiarios = '@Url.Action("Incluir", "Beneficiario", new { id = Model.Id })';
+
+        var obj = @Html.Raw(Json.Encode(Model));
+    </script>
+
+    @Scripts.Render("~/bundles/jMask")
+    @Scripts.Render("~/bundles/altClientes")
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")
+
+
+<a href="#" data-toggle="modal" data-target="#modalBeneficiarios" class="btn btn-sm btn-default" id="btnModalBeneficiarios"><strong>Beneficiários</strong></a>
+<!-- Modal -->
+<div class="modal fade" id="modalBeneficiarios" data-backdrop="static" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="col-sm-12" id="Content">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,22 @@
+﻿
+
+@section scripts{
+    <script>
+
+        var urlPost = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
+        var urlBeneficiarioList = '@Url.Action("BeneficiarioList", "Beneficiario", new { area = "" })';
+        var urlAlteracao = '@Url.Action("Alterar", "Beneficiario", new { area = "" })';
+        var urlDelete = '@Url.Action("Excluir", "Beneficiario", new { area = "" })';
+        var urlRetorno = '@Url.Action("Incluir", "Beneficiario")';
+    </script>
+
+
+    @Scripts.Render("~/bundles/jMask")
+    @Scripts.Render("~/bundles/beneficiarios")
+    @Scripts.Render("~/bundles/listBeneficiarios")
+}
+
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("FormsBenenficiario")
+<br />
+<table id="gridBeneficiarios" class="table"></table>
