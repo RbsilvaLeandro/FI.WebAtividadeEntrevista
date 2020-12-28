@@ -1,6 +1,5 @@
 ﻿
-$(document).ready(function () {
-    $("#CPF").mask("###.###.###-##");
+$(document).ready(function () {   
     $('#formCadastro').submit(function (e) {
         e.preventDefault();
         $.ajax({

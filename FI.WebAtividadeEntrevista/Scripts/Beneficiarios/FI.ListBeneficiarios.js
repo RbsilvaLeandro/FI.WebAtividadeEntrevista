@@ -1,6 +1,5 @@
 ﻿
-$(document).ready(function () {
-    $("#CPFBeneficiario").mask("###.###.###-##");
+$(document).ready(function () {   
     if (document.getElementById("gridBeneficiarios"))
         $('#gridBeneficiarios').jtable({
             paging: true, //Enable paging           

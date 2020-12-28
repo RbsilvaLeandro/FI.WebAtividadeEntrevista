@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#CPF").mask("###.###.##-##");
+    
     if (obj) {
         $('#formCadastro #Nome').val(obj.Nome);
         $('#formCadastro #CPF').val(obj.CPF);

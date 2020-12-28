@@ -2,8 +2,7 @@
 
     $(".navbar").remove();
     $("hr").remove();
-    $("footer").remove();
-    $("#CPFBeneficiario").mask("###.###.###-##");
+    $("footer").remove();  
 
     if (obj) {
         $('#formCadastroBeneficiario #NomeBeneficiario').val(obj.Nome);
